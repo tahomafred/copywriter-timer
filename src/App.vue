@@ -1,13 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <v-app>
+    <navigation></navigation>
+    <router-view></router-view>
+    <appFooter></appFooter>
+  </v-app>
 </template>
 
 <script>
+import navigation from '@/components/navigation/navigation'
+import appFooter from '@/components/footer/footer'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {navigation, appFooter}
 }
 </script>
 
